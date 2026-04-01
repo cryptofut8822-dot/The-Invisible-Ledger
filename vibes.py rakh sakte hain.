@@ -1,0 +1,44 @@
+viimport time
+import sys
+
+def scroll_lyrics(text, delay=0.05):
+    for char in text:
+        sys.stdout.write(char)
+        sys.stdout.flush()
+        time.sleep(delay)
+    print()
+
+def play_blinding_lights():
+    title = "🎵 NOW PLAYING: BLINDING LIGHTS - THE WEEKND 🎵"
+    print("=" * len(title))
+    print(title)
+    print("=" * len(title))
+    time.sleep(1)
+
+    lyrics = [
+        ("\n[Intro - Synth Beats Ramping Up...]", 0.1),
+        ("I've been on my own for long enough...", 0.08),
+        ("Maybe you can show me how to love, maybe...", 0.08),
+        ("I'm going through withdrawals...", 0.08),
+        ("You don't even have to do too much...", 0.08),
+        ("You can turn me on with just a touch, baby...", 0.08),
+        ("\n🔥 THE CHORUS 🔥", 0.1),
+        ("I said, ooh, I'm blinded by the lights!", 0.06),
+        ("No, I can't sleep until I feel your touch...", 0.06),
+        ("I said, ooh, I'm drowning in the night!", 0.06),
+        ("Oh, when I'm like this, you're the one I trust...", 0.06),
+    ]
+
+    for line, speed in lyrics:
+        scroll_lyrics(line, speed)
+        time.sleep(0.5)
+
+    print("\n" + "=" * 40)
+    print("Vibe Check: COMPLETE. Ready to code! 🚀")
+    print("=" * 40)
+
+if __name__ == "__main__":
+    try:
+        play_blinding_lights()
+    except KeyboardInterrupt:
+        print("\nMusic stopped. Back to the terminal!")bes.py rakh sakte hain.
